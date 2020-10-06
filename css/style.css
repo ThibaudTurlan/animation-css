@@ -1,0 +1,109 @@
+body {
+    height: 90vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: skyblue;
+    width: 600px;
+}
+
+.cub {²
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 200px;
+
+    background-color: rebeccapurple;
+    animation: anim 5s;
+    animation-iteration-count: infinite;
+}
+
+.cub h1 {
+    opacity: 0;
+}
+
+.cub:hover {
+    animation-play-state: paused;
+}
+
+.cub:hover h1 {
+    opacity: 1;
+    transition: .7s;
+}
+
+@keyframes anim {
+    0% {
+        transform: translateX(0px);
+    }
+
+    25% {
+        transform: translateX(-200px);
+    }
+
+    50% {
+        transform: translateX(0px);
+    }
+
+    75% {
+        transform: translateX(200px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+/* 
+*/
+
+.squareToCircle {
+    width: 200px;
+    height: 200px;
+    background-color: coral;
+    animation: square-to-circle 2s 1s infinite alternate;
+}
+
+@keyframes square-to-circle {
+    0% {
+        border-radius: 0 0 0 0;
+        background: coral;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        border-radius: 50% 0 0 0;
+        background: darksalmon;
+        transform: rotate(45deg);
+    }
+
+    50% {
+        border-radius: 50% 50% 0 0;
+        background: indianred;
+        transform: rotate(90deg);
+    }
+
+    75% {
+        border-radius: 50% 50% 50% 0;
+        background: lightcoral;
+        transform: rotate(135deg);
+    }
+
+    100% {
+        border-radius: 50%;
+        background: darksalmon;
+        transform: rotate(180deg);
+    }
+}
