@@ -1,12 +1,19 @@
 body {
-    height: 90vh;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(5, minmax(350px,1fr));
+}
+section {
+	border: 1px solid #CCC;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .box {
@@ -17,7 +24,7 @@ body {
     width: 600px;
 }
 
-.cub {²
+.cub {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,9 +32,10 @@ body {
     width: 200px;
     height: 200px;
 
-    background-color: rebeccapurple;
-    animation: anim 5s;
-    animation-iteration-count: infinite;
+	background-color: rebeccapurple;
+	animation: anim 3s;
+	animation-direction: alternate;
+   animation-iteration-count: infinite;
 }
 
 .cub h1 {
@@ -45,65 +53,97 @@ body {
 
 @keyframes anim {
     0% {
-        transform: translateX(0px);
-    }
-
-    25% {
         transform: translateX(-200px);
     }
 
-    50% {
-        transform: translateX(0px);
-    }
-
-    75% {
-        transform: translateX(200px);
-    }
-
     100% {
-        transform: translateX(0px);
-    }
+        transform: translateX(200px);
+    } 
 }
-
 
 /* 
 */
-
-.squareToCircle {
-    width: 200px;
-    height: 200px;
-    background-color: coral;
-    animation: square-to-circle 2s 1s infinite alternate;
+.box-two {
+    display: flex;
+    justify-content: center;
+}
+.anim-two {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+	
+  animation-name: example;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-@keyframes square-to-circle {
-    0% {
-        border-radius: 0 0 0 0;
-        background: coral;
-        transform: rotate(0deg);
-    }
+@keyframes example {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
 
-    25% {
-        border-radius: 50% 0 0 0;
-        background: darksalmon;
-        transform: rotate(45deg);
-    }
+/*  */
+.box-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#anim-one {
+    /* text-align: center; */
+    padding-top: 100px;
+    font-size: 0;
+    font-weight: 700;
+    color: #00CED2;
+    animation: bounce-text 2s infinite cubic-bezier(0.245, 0.325, 0.670, 1.510)
+}
 
-    50% {
-        border-radius: 50% 50% 0 0;
-        background: indianred;
-        transform: rotate(90deg);
-    }
-
-    75% {
-        border-radius: 50% 50% 50% 0;
-        background: lightcoral;
-        transform: rotate(135deg);
+@keyframes bounce-text {
+    60% {
+        font-size: 60px
     }
 
     100% {
-        border-radius: 50%;
-        background: darksalmon;
-        transform: rotate(180deg);
+        font-size: 60px
     }
+}
+
+/*  
+
+*/
+
+p {
+  animation-duration: 1s;
+  animation-name: slidein;
+  /* Repeter l'animation + dans l'autre sens
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+ */
+ 
+  /* On raccourci tout
+  animation: 3s infinite alternate slidein; */
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+    font-size:2em;
+  }
+
+  75% {
+  font-size: 400%;
+  margin-left: 25%;
+  width: 150%;
+  }
+ 
+  to {
+    margin-left: 0%;
+    width: 100%;
+    font-size:1em;
+  }
 }
