@@ -151,13 +151,13 @@ section {
 
 @keyframes slidein {
     from {
-        margin-left: 100%;
+        margin-right: 100%;
         width: 100%;
         font-size: 1em;
     }
 
     to {
-        margin-left: 0%;
+        margin-right: 0%;
         width: 100%;
         font-size: 1em;
     }
