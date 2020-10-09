@@ -10,6 +10,8 @@
   background-color: #fff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.5s;
+
+  margin:  10px 0px 10px 0px;
 }
 
 .card a {
@@ -23,7 +25,7 @@
 
 .card__date {
   position: absolute;
-  top: 900px;
+  top: 940px;
   left: 478px;
   width: 45px;
   height: 45px;

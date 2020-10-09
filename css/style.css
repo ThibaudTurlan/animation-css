@@ -1,19 +1,20 @@
 body {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-rows: repeat(5, minmax(350px,1fr));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, minmax(350px, 1fr));
 }
+
 section {
-	border: 1px solid #CCC;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+    border: 1px solid #CCC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .box {
@@ -32,10 +33,10 @@ section {
     width: 200px;
     height: 200px;
 
-	background-color: rebeccapurple;
-	animation: anim 3s;
-	animation-direction: alternate;
-   animation-iteration-count: infinite;
+    background-color: rebeccapurple;
+    animation: anim 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
 
 .cub h1 {
@@ -58,7 +59,7 @@ section {
 
     100% {
         transform: translateX(200px);
-    } 
+    }
 }
 
 /* 
@@ -67,24 +68,49 @@ section {
     display: flex;
     justify-content: center;
 }
+
 .anim-two {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  position: relative;
-	
-  animation-name: example;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes example {
-  0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+    0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: green;
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+    }
 }
 
 /*  */
@@ -93,6 +119,7 @@ section {
     justify-content: center;
     align-items: center;
 }
+
 #anim-one {
     /* text-align: center; */
     padding-top: 100px;
@@ -116,34 +143,22 @@ section {
 
 */
 
-p {
-  animation-duration: 1s;
-  animation-name: slidein;
-  /* Repeter l'animation + dans l'autre sens
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
- */
- 
-  /* On raccourci tout
-  animation: 3s infinite alternate slidein; */
+.text-animation {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
 }
 
 @keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%; 
-    font-size:2em;
-  }
+    from {
+        margin-left: 100%;
+        width: 100%;
+        font-size: 1em;
+    }
 
-  75% {
-  font-size: 400%;
-  margin-left: 25%;
-  width: 150%;
-  }
- 
-  to {
-    margin-left: 0%;
-    width: 100%;
-    font-size:1em;
-  }
+    to {
+        margin-left: 0%;
+        width: 100%;
+        font-size: 1em;
+    }
 }
