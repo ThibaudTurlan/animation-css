@@ -51,7 +51,10 @@ section {
     opacity: 1;
     transition: .7s;
 }
-
+.inputbox{
+    width: 80%;
+    height: 10%;
+}
 @keyframes anim {
     0% {
         transform: translateX(-200px);
