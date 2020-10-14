@@ -1,7 +1,6 @@
 //ANIMATION 1
 
 document.getElementById("input1").value = "animation-duration: 3s; animation-direction: alternate;"
-// document.getElementById("input1").value = "animation-direction: alternate;"
 document.getElementById("input1").addEventListener("keyup",function(){
     let classes = document.getElementById("anim1").className.split(" ");
     if(classes.indexOf("dynamic1") !== -1){
